@@ -1,0 +1,24 @@
+{
+  "name": "project-boilerplate",
+  "version": "1.0.0",
+  "description": "Tooling boilerplate for frontend projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --output-style compressed -o dist/css src/scss",
+    "serve": "browser-sync start --server --files 'dist/css/*.css, **/*.html' ",
+    "watch:css": "onchange \"src/scss\" -- npm run scss",
+    "start": "run-p serve watch:css"
+  },
+  "keywords": [
+    "tooling"
+  ],
+  "author": "Odafe",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.0.2"
+  }
+}
